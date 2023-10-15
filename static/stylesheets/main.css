@@ -1,0 +1,330 @@
+/* Standard base elements (base.html) */
+
+body{
+    background: linear-gradient(110deg, #87CEFA 10%, #CBC3E3);
+    font-family: sans-serif;
+}
+h1 {
+    text-align:center;
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    background-color: white;
+    color: black;
+}
+
+#bottomfooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* --------------------------------------- */
+
+
+/* Outer containers (index.html) */
+
+#content{
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+/* --------------------------------------- */
+
+
+/* Left side contact info (index.html) */
+
+.contact_information {
+    text-align: center;
+    color: black;
+    padding: 3vh;
+  }
+
+#contact_text{
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: white;
+    display: inline-block;
+    padding: 2vh;
+}
+
+#liu-logo{
+    border-radius: 50%;
+    margin-top: 2vh;
+    padding: 2%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* --------------------------------------- */
+
+
+/* Middle about us and image (index.html) */
+
+.About_Us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#About_Us_img {
+    border-radius: 50%;
+}
+
+.caption {
+    margin: 3vh;
+    text-align: center;
+    display: block;
+}
+
+/* --------------------------------------- */
+
+
+/* Right side projects (index.html) */
+
+.project_numbers {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#latest_projects{
+    color: black;
+    margin-top: 3vh;
+    display: inline-block;
+}
+
+#project_image{
+    width: 12vw;
+    height: 15vh;
+    border-radius: 1vh;
+    border: 2px solid white;
+}
+
+/* -------------------------------- */
+
+
+/* Filter properties (techniques.html) */
+
+ul{
+    list-style-type: none;
+}
+
+.dropdown{
+    display: flex;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown_content {
+    display: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+    top: 100%; /* Position the dropdown content below the button */
+    left: 0;
+}
+
+.dropdown:hover .dropdown_content {
+    display: block;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#searchterm{
+    margin-left: 2vw;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px 1px rgba(0,0,0,0.75);
+}
+    
+#apply{
+    color: white;
+    background-color: black;
+    margin-left: 2vw;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+#apply:hover{
+    background-color: rgb(40, 39, 39);
+}
+
+/* ---------------------------------------------- */
+
+
+/* Project image properties (projects.html, techniques.html) */
+
+.small_image{
+    border: 2px solid white;
+    border-radius: 5%;
+    margin-top: 5vh;
+    width: 25vw;
+    height: 20vh;
+}
+
+/* --------------------------------------- */
+
+
+/* Project positions (projects.html, techniques.html) */
+
+.align_projects{
+    color: black;
+    text-decoration: none;
+}
+
+.project-pos{
+    color: black;
+    text-decoration: none;
+    width: fit-content;
+    align-items: center;
+}
+
+#project_name{
+    display: block;
+    text-align: center;
+}
+
+#project_desc{
+    text-align: center;
+}
+
+#project_placement{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 10vh 10vw;
+    justify-content: space-between;
+}
+
+/* --------------------------------------- */
+
+
+/* Element positioning for every project (projectpage.html) */
+
+.Main_Info{
+    margin-top: 7vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#big_image{
+    width: 70vw;
+    height: 30vh;
+    border: 2px solid white;
+    border-radius: 2%;
+}
+
+#project_name_id{
+    display: block;
+    text-align: center;
+    margin: 3vh;
+}
+
+#long_description{
+    display: block;
+    text-align: center;
+    width: 60vw;
+    margin-bottom: 3vh;
+}
+
+
+.Info_Panel{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: auto;
+    align-content: flex-end;
+    margin: 1vh;
+    margin-right: 4vw;
+}
+
+#Info_Items{
+    padding: 1vw;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3%;
+    width: 10vw;
+    height: fit-content;
+}
+
+#Project_Info_Title{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+/* -------------------------------------------------------- */
+
+/* Element positioning for every project (projectpage.html) */
+
+
+#filter_form{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#filter_form_fields{
+    display: flex;
+}
+
+#search_fields{
+    display: block;
+}
+
+#sort_order{
+    display: block;
+}
+
+#sort_by{
+    display: block;
+}
+
+#searchterm_projects{
+    margin-left: 2vw;
+    height: fit-content;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px 1px rgba(0,0,0,0.75);
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+}
+
+#search_submit{
+    display: flex;
+    height: fit-content;
+    margin-left: 2vw;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+/* -------------------------------------------------------- */

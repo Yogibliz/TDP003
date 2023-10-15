@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Techniques
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<h1>Techniques</h1>
+<!-- Add filter here to align with search. -->
+<form id="filter_form" action="/techniques/" method="POST">
+
+  <div class="dropdown">
+    <p>Techniques</p>
+    <div class="dropdown_content">
+      {%for i in range(tech | length)%}
+      <ul>
+        <li><input type="checkbox" id="techniques" name="techniques" value="{{tech[i]}}"> {{tech[i]}} </li>
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+  <input type="submit" id="apply" value="Apply Filters">
+</form>
+
+<div id="project_placement">
+  {%for i in range(data | length)%}
+    <div class="align_projects">
+      <a href="{{url_for('project_page', id=data[i].project_id)}}">
+        <div class="project-pos">
+          <img class="small_image" src="{{data[i].small_image}}" alt="{{data[i].project_id}}">
+          <h2 id="project_name">{{data[i].project_name}}</h2>
+          <p id="project_desc">{{data[i].short_description}}</p>
+        </div>
+      </a>
+    </div>
+  {%endfor%}
+</div>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}
+

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Projects
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<h1>Projects</h1>
+
+    <form id="filter_form" action="/projects/" method="POST">
+      <div id="filter_form_fields">
+        <ul id="search_fields">
+          <li><h3>Search Fields:</h3></li>
+          <li><input type="radio" name="search_fields" value="project_name" checked="">Project Name</li>
+          <li><input type="radio" name="search_fields" value="project_id">Project ID</li>
+          <li><input type="radio" name="search_fields" value="long_description">Long Description</li>
+        </ul>
+        <ul id="sort_order">
+          <li><h3>Sort order:</h3></li>
+          <li><input type="radio" name="sort_order" value="desc" checked="">Descending</li>
+          <li><input type="radio" name="sort_order" value="asc">Ascending</li>
+        </ul>
+        <ul id="sort_by">
+          <li><h3>Sort by:</h3></li>
+          <li><input type="radio" name="sort_by" value="start_date" checked="">Start date</li>
+          <li><input type="radio" name="sort_by" value="end_date">End date</li>
+          <li><input type="radio" name="sort_by" value="project_name">Project Name</li>
+          <li><input type="radio" name="sort_by" value="project_id">Project ID</li>
+        </ul>
+        <input type="text" id="searchterm_projects" name="searchterm" placeholder="Search..."><br>
+      </div>
+      <input type="submit" id="search_submit" value="Search">
+    </form>
+
+    <div id="project_placement">
+      {%for i in range(data | length)%}
+        <div class="align_projects">
+          <a href="{{url_for('project_page', id=data[i].project_id)}}">
+            <div class="project-pos">
+              <img class="small_image" src="{{data[i].small_image}}" alt="{{data[i].project_id}}">
+              <h2 id="project_name">{{data[i].project_name}}</h2>
+              <p id="project_desc">{{data[i].short_description}}</p>
+            </div>
+          </a>
+        </div>
+
+  {%endfor%}
+</div>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}

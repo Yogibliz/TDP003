@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{data.project_name}}
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<!-- Insert page content here. -->
+<div class="Main_Info">
+  <img id="big_image" src="{{data.big_image}}">
+  <h2 id="project_name_id">{{data.project_name}}</h2>
+  <p id="long_description">{{data.long_description}}</p>
+</div>
+
+<div class="Info_Panel">
+  <div id="Info_Items">
+    <h2 id="Project_Info_Title">Projekt Info:</h2>
+    <p><b>Projekt ID:</b> {{data.project_id}}</p>
+    <p><b>Projekt Namn:</b> {{data.project_name}}</p>
+    <p><b>Start Datum:</b> {{data.start_date}}</p>
+    <p><b>Slut Datum:</b> {{data.end_date}}</p>
+    <p><b>Kurs ID:</b> {{data.course_id}}</p>
+    <p><b>Kurs Namn:</b> {{data.course_name}}</p>
+    <p><b>Kurspoäng:</b> {{data.course_credit}}</p>
+    <p><b>Gruppstorlek:</b> {{data.group_size}}</p>
+    <!-- Använd get_techniques (gör en get_members funktion om det behövs.) -->
+    <p><b>Gruppmedlemmar:</b> | {% for member in data.group_members %} {{ member }} | {% endfor %}</p>
+    <p><b>Tekniker:</b> | {% for technique in data.techniques_used %} {{ technique }} | {% endfor %}</p>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}
+

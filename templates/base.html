@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  {% block head %}
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/main.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %}</title>
+    </meta charset="UTF-8">
+  </head>
+  {% endblock %}
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="{{url_for('home_page')}}">Home</a>
+        <a class="nav-item nav-link active" href="{{url_for('projects_page')}}">Projects</a>
+        <a class="nav-item nav-link active" href="{{url_for('technique_page')}}">Techniques</a>
+      </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <div id="bottomfooter">
+      {% block footer %}
+      &copy; 2023 Daniel Roman, Oliver Andersson
+      {% endblock %}
+    </div>
+  </body>
+</html>

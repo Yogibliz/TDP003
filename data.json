@@ -1,0 +1,116 @@
+[
+    {
+        "project_name": "Sokoban Game",
+        "project_id": 1,
+        "start_date": "2023-09-01",
+        "end_date": "2023-09-08",
+        "big_image": "../static/sokoban.jpg",
+        "small_image": "../static/Sokoban_game.png",
+        "link": "",
+        "techniques_used": [
+            "Python"
+          ],
+          "course_id": "TDP002",
+          "course_name": "Imperativ programmering",
+          "course_credit": "6",
+          "short_description": "A box pushing game in python",
+          "long_description": "A box pushing game in python, built using ADT. ADTs are made to check where the player and objects are in relation to eachother and what should happen if they colide. Then the user inputs and the game board are printed out and handled outside the ADT in the main game loop.",
+          "group_size": 2,
+          "group_members": [
+            "Oliver Andersson", 
+            "Daniel Roman"
+        ]
+    },
+    {
+        "project_name": "Music Album",
+        "project_id": 2,
+        "start_date": "2023-04-23",
+        "end_date": "2023-05-11",
+        "big_image": "../static/disco.jpg",
+        "small_image": "../static/falling.png",
+        "link": "",
+        "techniques_used": [
+            "CSV",
+            "HTML",
+            "CSS"
+          ],
+          "course_id": "TDP003",
+          "course_name": "Projekt: Egna datormiljön",
+          "course_credit": "6",
+          "short_description": "A music album created with the use of other techniques",
+          "long_description": "We have created a music album with the help of CSV, HTML and CSS.",
+          "group_size": 3,
+          "group_members": [
+            "Someone", 
+            "Someone else",
+            "Another one"
+        ]
+    },
+    {
+        "project_name": "Sten, sax, påse",
+        "project_id": 3,
+        "start_date": "2023-01-12",
+        "end_date": "2023-01-13",
+        "big_image": "../static/sten.jpg",
+        "small_image": "../static/sten-sax-pase-ryggsaeck.jpg",
+        "link": "",
+        "techniques_used": [
+            "Python",
+            "HTML",
+            "CSS"
+          ],
+          "course_id": "TDP003",
+          "course_name": "Projekt: Egna datormiljön",
+          "course_credit": "6",
+          "short_description": "Sten, sax, påse",
+          "long_description": "Sten, sax, påse skapat med HTML och CSS",
+          "group_size": 1,
+          "group_members": "Me"
+    },
+    {
+        "project_name": "Mulle meck bilservice",
+        "project_id": 4,
+        "start_date": "2021-12-07",
+        "end_date": "2021-12-12",
+        "big_image": "../static/Mulle_meck_big.png",
+        "small_image": "../static/Mulle_meck_small.png",
+        "link": "",
+        "techniques_used": [
+            "Python",
+            "Torture"
+          ],
+          "course_id": "TDP093",
+          "course_name": "Suffering of the mortals",
+          "course_credit": "None You're just forced to be here",
+          "short_description": "Mulle",
+          "long_description": "Mulle mäckar",
+          "group_size": 7,
+          "group_members": [
+            "Me", 
+            "My other personalities"
+        ]
+    },
+    {
+        "project_name": "Fighting Game",
+        "project_id": 5,
+        "start_date": "2023-10-01",
+        "end_date": "2023-10-08",
+        "big_image": "../static/gameplay.jpg",
+        "small_image": "../static/fight.jpg",
+        "link": "",
+        "techniques_used": [
+            "Ruby",
+            "C#"
+          ],
+          "course_id": "TDP002",
+          "course_name": "Imperativ programmering",
+          "course_credit": "6",
+          "short_description": "A fighting game",
+          "long_description": "A game where two players pick a character and fight eachother. With the use of controls from either Keyboard or Controller the players can use different attacks and abilities ranging from character to character.",
+          "group_size": 2,
+          "group_members": [
+            "Oliver Andersson",
+	        "Daniel Roman"
+        ]
+    }
+]

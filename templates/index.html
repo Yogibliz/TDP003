@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div id="content">
+  <div class="contact_information">
+    <div id="contact_text">
+      <h4>Names:</h4>
+      <h5>Daniel Roman</h5>
+      <h5>Oliver Andersson</h5>
+      <br>
+      <h4>Emails:</h4>
+      <h5>danav696@student.liu.se</h5>
+      <h5>olian419@student.liu.se</h5>
+      <img id="liu-logo" width="100vw" height="100vh" src="{{url_for('static', filename='liu.png')}}" alt="Skolans logo"/>
+    </div>
+  </div>
+
+  <!-- Add image to the About Us section. -->
+  <div class="About_Us">
+    <img id="About_Us_img" width="250vw" height="250vh" src="{{url_for('static', filename='d-sektionen.png')}}" />
+    <h1>Om Oss</h1>
+    <span class="caption">
+      Vi är studenter som pluggar första året på programmet Innovativ Programmering vid Linköpings Universitet.
+    </span>
+  </div>
+
+  <div class="project_numbers">
+    <h3>Våra senaste projekt</h3>
+    <br>
+    <!-- Takes the first 3 projects, since they're ordered by start_date in the search func. -->
+    {%for i in range(3)%}
+    <a href="{{url_for('project_page', id=data[i].project_id)}}">
+      <div id="latest_projects">
+        <img id="project_image" src="{{data[i].small_image}}" alt="{{data[i].project_id}}">
+        <h2>{{data[i].project_name}}</h2>
+        <p>{{data[i].short_description}}</p>
+      </div>
+    </a>
+    {%endfor%}
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}
+
