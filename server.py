@@ -10,6 +10,11 @@ def load_data():
         print('No data.json file')
     return data.load('data.json')
 
+#Default error handler for 404 page. Returns 404.html in case the page doesn't exist.
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', errormsg=error)
+
 @app.route('/')
 @app.route('/index/')
 #Print out the home page for the route (/) and (/index/) and display the data filtered.
@@ -101,12 +106,6 @@ def technique_page():
     projects_filtered = data.search(projects, sort_by, sort_order, techniques, search, search_fields)
 
     return render_template('techniques.html', data=projects_filtered, tech=techs)
-
-#Default error handler for 404 page. Returns 404.html in case the page doesn't exist.
-@app.errorhandler(404)
-def page_not_found(error):
-    return render_template('404.html')
-
 
 if __name__ == "__main__":
     #No error output to the file?
